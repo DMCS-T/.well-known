@@ -1,0 +1,58 @@
+/* General padding and margin for form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling labels for better visibility */
+label {
+    color: #EFEFEF;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style inputs and textarea with a theme-consistent look */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #EFEFEF;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* Customize the submit button */
+.submit-button {
+    background-color: #0066A2;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005688;
+}
+
+/* Enhanced header style */
+._header_uqivd_7 {
+    padding: 20px 0;
+    text-align: center;
+    color: #EFEFEF;
+}
+
+/* Fix for full width inputs and textareas */
+input, textarea {
+    box-sizing: border-box; /* adjust box sizing */
+}
