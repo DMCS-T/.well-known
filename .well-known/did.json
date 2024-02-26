@@ -1,0 +1,48 @@
+{
+  "id": "did:web:www.dmcomputerservices.net",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:www.dmcomputerservices.net"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://www.dmcomputerservices.net/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/8e62cedf-f152-43fb-a20d-fed7c5b24ca5"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#9d93f8efc408468fbb1781d349d95070vcSigningKey-704ee",
+      "controller": "did:web:www.dmcomputerservices.net",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "o5kM9m6T1H7Wl71atByug9b4qRb6LBLfht5RK3cXVlI",
+        "y": "UCFN1-0A-uCCCMPzHV99kFcQbkblgG1NkaA-x0yptjE"
+      }
+    }
+  ],
+  "authentication": [
+    "#9d93f8efc408468fbb1781d349d95070vcSigningKey-704ee"
+  ],
+  "assertionMethod": [
+    "#9d93f8efc408468fbb1781d349d95070vcSigningKey-704ee"
+  ]
+}
