@@ -2751,10 +2751,15 @@ var hsVars = {
 }
 </script> 
 
-     <div id="particlesjs"></div>
+     <div id="particlesJs"></div>
 
     <script>
-        particlesjs("particlesjs", {
+   window.onload = function() { Particles.init ({
+    selector: '.background'
+  });
+};
+    </script> <script>
+ Particles("particlesJs", {
           particles: {
             number: {
               value: 80,
