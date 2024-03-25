@@ -37,13 +37,39 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
             background-size: cover;
             background-position: 50% 50%;
         }
+ 
+        .iframeStyle {
+            width: 350px;
+            height: 500px;
+            border: none;
+        }
+
+        #chat-bot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            max-width: 100%;
+            z-index: 1000;
+        }
+
+        #chat-toggle {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
-  <style>
 
 
-
-
-
+<style>
 
 
 
@@ -2757,15 +2783,30 @@ var hsVars = {
     is_hubspot_user: null
 }
 </script> 
+<div id="particlesJs"></div>
 
-     <div id="particlesJs"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-   window.onload = function() { Particles.init ({
-    selector: '.background'
-  });
+<script>
+window.onload = function() {
+    particlesJS('particlesJs', {
+        particles: {
+            // Put your particles configuration here
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            // Other properties
+        },
+        // Possible interactivity and retina_detect configuration
+    });
 };
-    </script> <script>
+</script>
+    
+   <script>
  Particles("particlesJs", {
           particles: {
             number: {
@@ -2871,12 +2912,23 @@ var hsVars = {
           },
           retina_detect: true
         }); </script>
-   
+  
+
+<div id="chat-bot-container">
+    <button id="chat-toggle">Chat with Us!</button>
+    <iframe src="https://web.powerva.microsoft.com/environments/Default-a46013b9-b973-4e34-9bbc-fe5fdce24eb4/bots/crd55_copilot2/webchat" class="iframeStyle hidden" frameborder="0"></iframe>
+</div>
+
+<script>
+document.getElementById('chat-toggle').addEventListener('click', function() {
+    var iframe = document.querySelector('.iframeStyle');
+    iframe.classList.toggle('hidden');
+});
+</script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.js" integrity="sha512-BgV3bZfMmUklIZI+dP0SILdmQ0RBY2gxegFFyfgo4Ui56WhKF4Pny9LsV/l96jxDDA+2w47zAXA4IyHo2UT/Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.306/js/index.js"></script> 
- </body>
-
-
-
+</body>
 </html>
